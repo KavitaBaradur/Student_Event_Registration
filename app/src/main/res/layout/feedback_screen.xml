@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How was the Event..?"
+        android:textColor="@color/red"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="40dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Awesome"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need Improvement"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"/>
+
+        </RadioGroup>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="@color/translucent_red"
+        android:layout_gravity="center"/>
+</LinearLayout>

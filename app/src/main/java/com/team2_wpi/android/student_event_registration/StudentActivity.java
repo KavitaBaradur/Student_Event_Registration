@@ -37,22 +37,25 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
 
         Cursor cursor = DBOperator.getInstance().execQuery(SQLCommand.QUERY_1, new String[]{stud_name.getText().toString()});
-
         cursor.moveToFirst();
-        if (cursor.getCount() < 0) {
+
+        if (cursor.getCount() <= 0)
+        {
             String data1 = "no such name";
             Log.i(data1, "WRONG NAME");
+            Toast.makeText(getApplicationContext(), "WRONG USERNAME", Toast.LENGTH_SHORT).show();
         }
-        String db_password = cursor.getString(0);
-        Log.d(db_password, "PASSWORD");
-
-        // do what ever you want here
-        if (db_password.equals(stud_pass.getText().toString())) {
-            Intent intent = new Intent(this, StudentEventActivity.class);
-            this.startActivity(intent);
-        }
-        else{
-            Toast.makeText(getApplicationContext(),"WRONG PSSWORD",Toast.LENGTH_SHORT);
+        else {
+            String db_password = cursor.getString(0);
+            Log.d(db_password, "PASSWORD");
+            // do what ever you want here
+            if (db_password.equals(stud_pass.getText().toString())) {
+                Intent intent = new Intent(this, StudentEventActivity.class);
+                this.startActivity(intent);
+            }
+            else {
+                Toast.makeText(getApplicationContext(), "WRONG PASSWORD", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }

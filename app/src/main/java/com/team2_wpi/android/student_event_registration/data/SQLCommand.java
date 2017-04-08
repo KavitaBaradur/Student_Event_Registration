@@ -10,4 +10,9 @@ public abstract class SQLCommand {
 
     public static String QUERY_2 = "select * from Event";
 
+    // init org event history
+    public static String ORG_EVENT_HIS = "select Event_ID as _id, Event_Name as name, Event_Type as type, Event_Date as date " +
+                                         "from Event " +
+                                         "where Org_ID = ?";
+
 }

@@ -50,10 +50,14 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="450dp">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ScrollView>
 
     <Button
         android:id="@+id/org_feedback_back"

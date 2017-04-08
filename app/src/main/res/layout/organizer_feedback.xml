@@ -10,9 +10,8 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:text="Event Name"
             android:textColor="@android:color/background_dark"
@@ -21,9 +20,8 @@
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="60dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:text="Great"
             android:textColor="@android:color/holo_green_light"
@@ -31,9 +29,8 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="60dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:text="Fair"
             android:textColor="@android:color/holo_orange_light"
@@ -41,9 +38,8 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="60dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:text="Need Improve"
             android:textColor="@color/red"
@@ -55,6 +51,7 @@
         android:layout_height="450dp">
 
         <ListView
+            android:id="@+id/org_feedback_lv"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </ScrollView>

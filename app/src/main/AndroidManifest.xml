@@ -19,6 +19,8 @@
         <activity android:name=".StudentActivity"></activity>
         <activity android:name=".OrganizerActivity"></activity>
         <activity android:name=".StudentEventActivity"></activity>
+        <activity android:name=".OrganizerAddEventActivity" />
+        <activity android:name=".OrganizerFeedbackActivity" />
     </application>
 
 </manifest>

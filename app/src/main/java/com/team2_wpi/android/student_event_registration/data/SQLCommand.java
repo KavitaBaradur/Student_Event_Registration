@@ -11,9 +11,10 @@ public abstract class SQLCommand {
     public static String QUERY_2 = "select * from Event";
 
     // init org event history
-    public static String ORG_EVENT_HIS = "select Event_ID as _id, Event_Name as name, Event_Type as type, Event_Date as date " +
-                                         "from Event " +
-                                         "where Org_ID = ?";
+    public static String ORG_EVENT_HIS = "select E.Event_ID as _id, E.Event_Name as name, E.Event_Type as type, R.EventDate as date " +
+                                         "from Event E, Reserve R " +
+                                         "where E.Event_ID = R.Event_ID " +
+                                         "and E.Org_ID = ?";
     // init org feedback history
     public static String ORG_FEEDBACK = "select E.Event_ID as _id, E.Event_Name as name, SUM(F.Great) as great, SUM(F.Fair) as fair, SUM(F.Need_Imp) as need_imp " +
                                          "from Event E, Feedback F " +

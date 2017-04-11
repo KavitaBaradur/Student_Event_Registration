@@ -21,4 +21,15 @@ public abstract class SQLCommand {
                                          "where E.Event_ID = F.Event_ID " +
                                          "and E.Org_ID = ? " +
                                          "group by E.Event_ID";
+    // get available place
+    public static String ORG_AVAL_PLACE = "select distinct P.Place_ID as _id, P.Place_Name as name " +
+                                          "from Place P, Reserve R " +
+                                          "where P.Place_ID = R.Place_ID " +
+                                          "and P.Place_ID not in (select P2.Place_ID " +
+                                                                 "from Place P2, Reserve R2 " +
+                                                                 "where P2.Place_ID = R2.Place_ID " +
+                                                                 "and R2.EventDate = ?";
+    // get sponsors
+    public static String ORG_ALL_SPON = "select Sponsor_ID as _id, Sponsor_Name as name " +
+                                        "from Sponsor";
 }

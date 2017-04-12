@@ -32,4 +32,15 @@ public abstract class SQLCommand {
     // get sponsors
     public static String ORG_ALL_SPON = "select Sponsor_ID as _id, Sponsor_Name as name " +
                                         "from Sponsor";
+    // insert to event
+    public static String ORG_INS_EVENT = "insert into Event(Org_ID, Event_Name, Event_Type) " +
+                                         "values (?, \"?\", \"?\");";
+    // insert to reserve
+    public static String ORG_INS_RESERVE = "insert into Reserve(Event_ID, Place_ID, EventDate, EventTime) " +
+                                           "values (?, ?, ?, ?);";
+    // insert to event detail
+    public static String ORG_INS_EVENT_DETAIL = "insert into Event_Detail(Event_ID, Sponsor_ID, Fund) " +
+                                                "values (?, ?, ?)";
+    // get last insert rowid
+    public static String GET_LAST_ID = "select last_insert_rowid();";
 }

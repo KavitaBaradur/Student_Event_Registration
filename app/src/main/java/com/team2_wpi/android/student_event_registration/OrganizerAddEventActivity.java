@@ -35,6 +35,8 @@ public class OrganizerAddEventActivity extends AppCompatActivity implements View
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // get org id
+        org_id = getIntent().getStringExtra("Org ID");
         // link view
         setContentView(R.layout.organizer_add_event);
         // find elements
@@ -99,6 +101,7 @@ public class OrganizerAddEventActivity extends AppCompatActivity implements View
             DBOperator.getInstance().execSQL(SQLCommand.ORG_INS_RESERVE, init_args);
             // go back to org main
             Intent intent = new Intent(this, OrganizerActivity.class);
+            intent.putExtra("Org ID", org_id);
             this.startActivity(intent);
         }
         else if (id == R.id.org_add_event_funding) {
@@ -127,6 +130,8 @@ public class OrganizerAddEventActivity extends AppCompatActivity implements View
             DBOperator.getInstance().execSQL(SQLCommand.ORG_INS_RESERVE, init_args);
             // go add funding
             Intent intent = new Intent(this, OrganizerAddSponsorActivity.class);
+            intent.putExtra("Org ID", org_id);
+            intent.putExtra("Event ID", event_id);
             this.startActivity(intent);
         }
     }

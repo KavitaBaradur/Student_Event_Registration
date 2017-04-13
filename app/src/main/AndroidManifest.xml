@@ -22,6 +22,7 @@
         <activity android:name=".OrganizerAddEventActivity" />
         <activity android:name=".OrganizerFeedbackActivity" />
         <activity android:name=".OrganizerAddSponsorActivity"/>
+        <activity android:name=".OrganizerLoginActivity" />
     </application>
 
 </manifest>

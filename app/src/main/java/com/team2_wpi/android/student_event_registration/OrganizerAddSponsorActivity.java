@@ -22,6 +22,7 @@ import com.team2_wpi.android.student_event_registration.util.DBOperator;
 public class OrganizerAddSponsorActivity extends AppCompatActivity implements View.OnClickListener {
     private String event_id;
     private String sponsor_id;
+    private String org_id;
     private ListView listView;
     private EditText funding;
     private Button submit;
@@ -29,6 +30,10 @@ public class OrganizerAddSponsorActivity extends AppCompatActivity implements Vi
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // get org id
+        org_id = getIntent().getStringExtra("Org ID");
+        // get event id
+        event_id = getIntent().getStringExtra("Event ID");
         // link view
         setContentView(R.layout.organizer_add_sponsor);
         // find elements
@@ -70,6 +75,7 @@ public class OrganizerAddSponsorActivity extends AppCompatActivity implements Vi
             DBOperator.getInstance().execSQL(SQLCommand.ORG_INS_EVENT_DETAIL, init_args);
             // go back to org main
             Intent intent = new Intent(this, OrganizerActivity.class);
+            intent.putExtra("Org ID", org_id);
             this.startActivity(intent);
         }
     }

@@ -25,6 +25,8 @@ public class OrganizerFeedbackActivity extends AppCompatActivity implements View
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // get org id
+        org_id = getIntent().getStringExtra("Org ID");
         // link view
         setContentView(R.layout.organizer_feedback);
         // find elements
@@ -58,6 +60,7 @@ public class OrganizerFeedbackActivity extends AppCompatActivity implements View
         // assign actions
         if (id == R.id.org_feedback_back) {
             Intent intent = new Intent(this, OrganizerActivity.class);
+            intent.putExtra("Org ID", org_id);
             this.startActivity(intent);
         }
     }

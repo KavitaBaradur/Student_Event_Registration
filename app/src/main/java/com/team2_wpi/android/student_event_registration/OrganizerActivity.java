@@ -28,6 +28,8 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // get org id
+        org_id = getIntent().getStringExtra("Org ID");
         // link view
         setContentView(R.layout.organizer_welcome);
         // find elements
@@ -44,7 +46,7 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
     private void visualHistory() {
         // init args
         String init_args[] = new String[1];
-        init_args[0] = "101";
+        init_args[0] = org_id;
         // execute the sql
         Cursor cursor = DBOperator.getInstance().execQuery(SQLCommand.ORG_EVENT_HIS, init_args);
         // bind the data to list
@@ -64,11 +66,13 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
         if (id == R.id.org_welcome_feedback) {
             // go feedback page
             Intent intent = new Intent(this, OrganizerFeedbackActivity.class);
+            intent.putExtra("Org ID", org_id);
             this.startActivity(intent);
         }
         else if (id == R.id.org_welcome_add) {
             // go add new event page
             Intent intent = new Intent(this,OrganizerAddEventActivity.class);
+            intent.putExtra("Org ID", org_id);
             this.startActivity(intent);
         }
     }

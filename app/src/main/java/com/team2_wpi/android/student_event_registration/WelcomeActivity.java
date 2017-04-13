@@ -37,7 +37,7 @@ public class WelcomeActivity extends AppCompatActivity implements OnClickListene
             this.startActivity(intent);
 
         }else if (id == R.id.organizer_btn){
-            Intent intent = new Intent(this, OrganizerActivity.class);
+            Intent intent = new Intent(this, OrganizerLoginActivity.class);
             this.startActivity(intent);
         }
     }

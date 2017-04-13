@@ -10,6 +10,11 @@ public abstract class SQLCommand {
 
     public static String QUERY_2 = "select * from Event";
 
+    // org login
+    public static String ORG_LOGIN = "select Org_Password, Org_ID " +
+                                     "from Organizer " +
+                                     "where Org_Name = ?";
+
     // init org event history
     public static String ORG_EVENT_HIS = "select E.Event_ID as _id, E.Event_Name as name, E.Event_Type as type, R.EventDate as date " +
                                          "from Event E, Reserve R " +

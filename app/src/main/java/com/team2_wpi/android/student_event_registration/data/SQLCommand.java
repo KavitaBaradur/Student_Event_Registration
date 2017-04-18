@@ -33,7 +33,7 @@ public abstract class SQLCommand {
                                           "and P.Place_ID not in (select P2.Place_ID " +
                                                                  "from Place P2, Reserve R2 " +
                                                                  "where P2.Place_ID = R2.Place_ID " +
-                                                                 "and R2.EventDate = ?";
+                                                                 "and R2.EventDate = ?)";
     // get sponsors
     public static String ORG_ALL_SPON = "select Sponsor_ID as _id, Sponsor_Name as name " +
                                         "from Sponsor";
@@ -42,7 +42,7 @@ public abstract class SQLCommand {
                                          "values (?, \"?\", \"?\");";
     // insert to reserve
     public static String ORG_INS_RESERVE = "insert into Reserve(Event_ID, Place_ID, EventDate, EventTime) " +
-                                           "values (?, ?, ?, ?);";
+                                           "values (?, ?, \"?\", \"?\");";
     // insert to event detail
     public static String ORG_INS_EVENT_DETAIL = "insert into Event_Detail(Event_ID, Sponsor_ID, Fund) " +
                                                 "values (?, ?, ?)";

@@ -46,15 +46,10 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <ScrollView
+    <ListView
+        android:id="@+id/org_feedback_lv"
         android:layout_width="match_parent"
-        android:layout_height="450dp">
-
-        <ListView
-            android:id="@+id/org_feedback_lv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </ScrollView>
+        android:layout_height="450dp" />
 
     <Button
         android:id="@+id/org_feedback_back"

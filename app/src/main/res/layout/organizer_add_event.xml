@@ -111,16 +111,11 @@
         android:layout_height="wrap_content"
         android:text="Check Available Place" />
 
-    <ScrollView
+    <ListView
+        android:id="@+id/org_add_event_lv"
+        android:choiceMode="singleChoice"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-        <ListView
-            android:id="@+id/org_add_event_lv"
-            android:choiceMode="singleChoice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+        android:layout_height="200dp" />
 
     <Button
         android:id="@+id/org_add_event_funding"

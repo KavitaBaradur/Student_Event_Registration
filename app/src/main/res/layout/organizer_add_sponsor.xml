@@ -3,15 +3,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <ListView
+        android:id="@+id/org_add_sponsor_lv"
         android:layout_width="match_parent"
-        android:layout_height="400dp">
-
-        <ListView
-            android:id="@+id/org_add_sponsor_lv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+        android:layout_height="400dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

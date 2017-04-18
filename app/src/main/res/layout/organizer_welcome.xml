@@ -42,15 +42,10 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="400dp">
-
-        <ListView
-            android:id="@+id/org_event_his_lv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ListView>
-    </ScrollView>
+    <ListView
+        android:id="@+id/org_event_his_lv"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"></ListView>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -26,6 +26,19 @@ public abstract class SQLCommand {
                                          "from Event E, Reserve R " +
                                          "where E.Event_ID = R.Event_ID " +
                                          "and E.Org_ID = ?";
+
+    // delete event from event
+    public static String ORG_DELETE_EVENT = "delete from Event " +
+                                            "where Event_ID = ?";
+
+    // delete event from reserve
+    public static String ORG_DELETE_RES = "delete from Reserve " +
+                                          "where Event_ID = ?";
+
+    // delete event from event detail
+    public static String ORG_DELETE_DETAIL = "delete from Event_Detail " +
+                                             "where Event_ID = ?";
+
     // init org feedback history
     public static String ORG_FEEDBACK = "select E.Event_ID as _id, E.Event_Name as name, SUM(F.Good) as great, SUM(F.Fair) as fair, SUM(F.Need_Imp) as need_imp " +
                                          "from Event E, Feedback F " +

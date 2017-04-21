@@ -139,7 +139,7 @@ public class OrganizerAddEventActivity extends AppCompatActivity implements View
         }
     }
 
-    private class ItemClickListener implements AdapterView.OnItemClickListener {
+    class ItemClickListener implements AdapterView.OnItemClickListener {
         public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
             Cursor cursor = (Cursor) listView.getItemAtPosition(position);
             place_id = cursor.getString(0);

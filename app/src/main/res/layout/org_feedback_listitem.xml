@@ -6,21 +6,25 @@
     <TextView
         android:id="@+id/org_feedback_name"
         android:layout_width="200dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/org_feedback_great"
         android:layout_width="100dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/org_feedback_fair"
         android:layout_width="100dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/org_feedback_need_imp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:textAlignment="center" />
 </LinearLayout>

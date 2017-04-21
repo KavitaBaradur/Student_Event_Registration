@@ -27,7 +27,7 @@ public abstract class SQLCommand {
                                          "where E.Event_ID = R.Event_ID " +
                                          "and E.Org_ID = ?";
     // init org feedback history
-    public static String ORG_FEEDBACK = "select E.Event_ID as _id, E.Event_Name as name, SUM(F.Great) as great, SUM(F.Fair) as fair, SUM(F.Need_Imp) as need_imp " +
+    public static String ORG_FEEDBACK = "select E.Event_ID as _id, E.Event_Name as name, SUM(F.Good) as great, SUM(F.Fair) as fair, SUM(F.Need_Imp) as need_imp " +
                                          "from Event E, Feedback F " +
                                          "where E.Event_ID = F.Event_ID " +
                                          "and E.Org_ID = ? " +

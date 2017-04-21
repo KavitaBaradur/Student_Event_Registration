@@ -46,7 +46,7 @@ public class OrganizerFeedbackActivity extends AppCompatActivity implements View
         Cursor cursor = DBOperator.getInstance().execQuery(SQLCommand.ORG_FEEDBACK, init_args);
         // bind the data to list
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(getApplicationContext(),
-                                                              R.layout.org_event_listitem,
+                                                              R.layout.org_feedback_listitem,
                                                               cursor,
                                                               new String[] { "name", "great", "fair", "need_imp" },
                                                               new int[] { R.id.org_feedback_name, R.id.org_feedback_great, R.id.org_feedback_fair, R.id.org_feedback_need_imp },

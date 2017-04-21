@@ -32,8 +32,9 @@ public class WelcomeActivity extends AppCompatActivity implements OnClickListene
     public void onClick(View v)
     {
         int id = v.getId();
-        if (id == R.id.student_btn){
-            Intent intent = new Intent(this, StudentActivity.class);
+        /*student login screen*/
+        if (id == R.id.student_btn) {
+            Intent intent = new Intent(this, StudentLoginActivity.class);
             this.startActivity(intent);
 
         }else if (id == R.id.organizer_btn){

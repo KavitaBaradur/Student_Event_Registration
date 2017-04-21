@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="30dp">
+
     <TextView
+        android:id="@+id/events_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Events Happening.."
-        android:textStyle="bold"
-        android:textSize="30dp"
+        android:layout_alignParentTop="true"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginBottom="30dp"
+        android:text="@string/events_happening"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ListView
+        android:id="@+id/events_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
-    </LinearLayout>
+        android:layout_height="300dp"
+        android:layout_below="@id/events_heading"></ListView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/student_bottom_navigation_window"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/student_bottom_navigation" /> 
+</RelativeLayout>

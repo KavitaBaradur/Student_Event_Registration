@@ -10,6 +10,12 @@ public abstract class SQLCommand {
 
     public static String QUERY_2 = "select * from Event";
 
+    public static String QUERY_3 = "select STD_NAME from Student where STD_ID=?";
+
+    public static String QUERY_4 = "select STD_MAJOR from Student where STD_ID=?";
+
+    public static String QUERY_5 = "update STUDENT set STD_PASSWORD=? where STD_ID=?";
+
     // org login
     public static String ORG_LOGIN = "select Org_Password, Org_ID " +
                                      "from Organizer " +

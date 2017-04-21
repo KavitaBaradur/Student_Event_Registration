@@ -51,8 +51,8 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(getApplicationContext(),
                                                               R.layout.org_event_listitem,
                                                               cursor,
-                                                              new String[] { "name", "type", "date" },
-                                                              new int[] { R.id.org_event_name, R.id.org_event_type, R.id.org_event_date },
+                                                              new String[] { "name", "type", "date", "time" },
+                                                              new int[] { R.id.org_event_name, R.id.org_event_type, R.id.org_event_date, R.id.org_event_time },
                                                               SimpleCursorAdapter.IGNORE_ITEM_VIEW_TYPE);
         listView.setAdapter(adapter);
     }

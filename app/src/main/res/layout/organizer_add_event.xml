@@ -79,6 +79,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="date"
+            android:text="YYYY-MM-DD"
             android:textSize="24sp" />
     </LinearLayout>
 
@@ -102,6 +103,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="time"
+            android:text="HH:MM:SS"
             android:textSize="24sp" />
     </LinearLayout>
 

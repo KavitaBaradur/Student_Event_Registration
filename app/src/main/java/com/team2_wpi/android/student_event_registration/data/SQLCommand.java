@@ -22,7 +22,7 @@ public abstract class SQLCommand {
                                      "where Org_Name = ?";
 
     // init org event history
-    public static String ORG_EVENT_HIS = "select E.Event_ID as _id, E.Event_Name as name, E.Event_Type as type, R.EventDate as date " +
+    public static String ORG_EVENT_HIS = "select E.Event_ID as _id, E.Event_Name as name, E.Event_Type as type, R.EventDate as date, R.EventTime as time " +
                                          "from Event E, Reserve R " +
                                          "where E.Event_ID = R.Event_ID " +
                                          "and E.Org_ID = ?";

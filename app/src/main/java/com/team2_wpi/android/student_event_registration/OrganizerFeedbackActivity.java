@@ -13,15 +13,12 @@ import android.widget.SimpleCursorAdapter;
 import com.team2_wpi.android.student_event_registration.data.SQLCommand;
 import com.team2_wpi.android.student_event_registration.util.DBOperator;
 
-import java.util.List;
-
 /**
- * Created by kavitabaradur on 4/1/17.
+ * Created by sylor on 4/7/17.
  */
 
-public class OrganizerActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button feedback;
-    private Button add_new;
+public class OrganizerFeedbackActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button back;
     private String org_id;
     private ListView listView;
 
@@ -31,30 +28,28 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
         // get org id
         org_id = getIntent().getStringExtra("Org ID");
         // link view
-        setContentView(R.layout.organizer_welcome);
+        setContentView(R.layout.organizer_feedback);
         // find elements
-        feedback = (Button) findViewById(R.id.org_welcome_feedback);
-        add_new = (Button) findViewById(R.id.org_welcome_add);
-        listView = (ListView) findViewById(R.id.org_event_his_lv);
+        back = (Button) findViewById(R.id.org_feedback_back);
+        listView = (ListView) findViewById(R.id.org_feedback_lv);
         // set up on click
-        feedback.setOnClickListener(this);
-        add_new.setOnClickListener(this);
-        // visualize event history
-        visualHistory();
+        back.setOnClickListener(this);
+        // visualize feedbacks
+        visualFeedback();
     }
 
-    private void visualHistory() {
+    private void visualFeedback() {
         // init args
         String init_args[] = new String[1];
         init_args[0] = org_id;
         // execute the sql
-        Cursor cursor = DBOperator.getInstance().execQuery(SQLCommand.ORG_EVENT_HIS, init_args);
+        Cursor cursor = DBOperator.getInstance().execQuery(SQLCommand.ORG_FEEDBACK, init_args);
         // bind the data to list
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(getApplicationContext(),
                                                               R.layout.org_event_listitem,
                                                               cursor,
-                                                              new String[] { "name", "type", "date" },
-                                                              new int[] { R.id.org_event_name, R.id.org_event_type, R.id.org_event_date },
+                                                              new String[] { "name", "great", "fair", "need_imp" },
+                                                              new int[] { R.id.org_feedback_name, R.id.org_feedback_great, R.id.org_feedback_fair, R.id.org_feedback_need_imp },
                                                               SimpleCursorAdapter.IGNORE_ITEM_VIEW_TYPE);
         listView.setAdapter(adapter);
     }
@@ -62,16 +57,9 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        // assign action
-        if (id == R.id.org_welcome_feedback) {
-            // go feedback page
-            Intent intent = new Intent(this, OrganizerFeedbackActivity.class);
-            intent.putExtra("Org ID", org_id);
-            this.startActivity(intent);
-        }
-        else if (id == R.id.org_welcome_add) {
-            // go add new event page
-            Intent intent = new Intent(this,OrganizerAddEventActivity.class);
+        // assign actions
+        if (id == R.id.org_feedback_back) {
+            Intent intent = new Intent(this, OrganizerActivity.class);
             intent.putExtra("Org ID", org_id);
             this.startActivity(intent);
         }

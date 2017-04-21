@@ -6,9 +6,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sys_name"
+        android:text="Organization Login"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:gravity="center"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"/>
@@ -24,16 +24,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/userid"
+            android:text="USERNAME :"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:gravity="center"/>
 
         <EditText
-            android:id="@+id/userid"
+            android:id="@+id/org_login_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/id">
+            android:hint="Name">
         </EditText>
     </LinearLayout>
 
@@ -47,25 +47,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/password"
+            android:text="PASSWORD :"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:gravity="center"/>
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="@string/password_hint" />
+        <EditText
+            android:id="@+id/org_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/signin_btn"
+        android:id="@+id/org_login_submit"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/sign_in"
+        android:text="Sign In"
         android:textAllCaps="true"
         android:gravity="center"
         android:layout_gravity="center"/>
+
 </LinearLayout>

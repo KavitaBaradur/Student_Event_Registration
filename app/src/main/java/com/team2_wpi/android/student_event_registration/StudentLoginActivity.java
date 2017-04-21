@@ -25,7 +25,7 @@ public class StudentLoginActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_screen);
+        setContentView(R.layout.student_login_screen);
         stud_id = (EditText) this.findViewById(R.id.userid);
         stud_pass = (EditText) this.findViewById(R.id.password);
         signin = (Button) this.findViewById(R.id.signin_btn);

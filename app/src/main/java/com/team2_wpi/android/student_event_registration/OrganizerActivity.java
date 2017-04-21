@@ -13,8 +13,6 @@ import android.widget.SimpleCursorAdapter;
 import com.team2_wpi.android.student_event_registration.data.SQLCommand;
 import com.team2_wpi.android.student_event_registration.util.DBOperator;
 
-import java.util.List;
-
 /**
  * Created by kavitabaradur on 4/1/17.
  */

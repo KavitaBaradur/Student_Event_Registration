@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_profile"
+        android:enabled="true"
+        android:title="@string/student_profile"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_reg_events"
+        android:enabled="true"
+        android:title="@string/reg_events"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_att_events"
+        android:enabled="true"
+        android:title="@string/att_events"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_logout"
+        android:enabled="true"
+        android:title="@string/student_logout"
+        android:visible="true"/>
+</menu>

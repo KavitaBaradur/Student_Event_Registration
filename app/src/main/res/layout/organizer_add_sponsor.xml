@@ -4,6 +4,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Sponsor"
+        android:textColor="@color/maroon"
+        android:layout_margin="20dp"
+        android:layout_marginTop="50dp"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
     <ListView
         android:id="@+id/org_add_sponsor_lv"
         android:layout_width="match_parent"
@@ -19,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Selected Sponsor: "
+            android:textColor="@color/blue"
             android:textSize="24sp" />
 
         <TextView
@@ -40,21 +53,29 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Funding"
+            android:layout_weight="1"
+            android:text="Funding: "
+            android:textColor="@color/blue"
             android:textSize="24sp" />
 
         <EditText
             android:id="@+id/org_add_sponsor_funding"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textSize="24sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/org_add_sponsor_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/red_button"
+        android:text="Submit"
+        android:textStyle="bold"/>
 </LinearLayout>

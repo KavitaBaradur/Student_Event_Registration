@@ -20,6 +20,13 @@
 
     <TextView
         android:id="@+id/org_event_date"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/org_event_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

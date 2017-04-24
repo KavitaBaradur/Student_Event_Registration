@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 
 import com.team2_wpi.android.student_event_registration.data.SQLCommand;
 import com.team2_wpi.android.student_event_registration.util.DBOperator;
@@ -26,6 +27,7 @@ public class OrganizerAddSponsorActivity extends AppCompatActivity implements Vi
     private ListView listView;
     private EditText funding;
     private Button submit;
+    private TextView selectedSponsor;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class OrganizerAddSponsorActivity extends AppCompatActivity implements Vi
         listView = (ListView) findViewById(R.id.org_add_sponsor_lv);
         funding = (EditText) findViewById(R.id.org_add_sponsor_funding);
         submit = (Button) findViewById(R.id.org_add_sponsor_submit);
+        selectedSponsor = (TextView) findViewById(R.id.org_add_sponsor_selected);
         // set up on click
         submit.setOnClickListener(this);
         listView.setOnItemClickListener(new ItemClickListener());
@@ -84,6 +87,7 @@ public class OrganizerAddSponsorActivity extends AppCompatActivity implements Vi
         public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
             Cursor cursor = (Cursor) listView.getItemAtPosition(position);
             sponsor_id = cursor.getString(0);
+            selectedSponsor.setText(cursor.getString(1));
         }
     }
 }

@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.team2_wpi.android.student_event_registration.data.SQLCommand;
@@ -31,6 +32,7 @@ public class OrganizerAddEventActivity extends AppCompatActivity implements View
     private EditText date;
     private EditText time;
     private ListView listView;
+    private TextView selectedPlace;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,6 +50,7 @@ public class OrganizerAddEventActivity extends AppCompatActivity implements View
         submit = (Button) findViewById(R.id.org_add_event_submit);
         funding = (Button) findViewById(R.id.org_add_event_funding);
         listView = (ListView) findViewById(R.id.org_add_event_lv);
+        selectedPlace = (TextView) findViewById(R.id.org_add_event_selected);
         // set up on click
         check.setOnClickListener(this);
         submit.setOnClickListener(this);
@@ -136,10 +139,11 @@ public class OrganizerAddEventActivity extends AppCompatActivity implements View
         }
     }
 
-    private class ItemClickListener implements AdapterView.OnItemClickListener {
+    class ItemClickListener implements AdapterView.OnItemClickListener {
         public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
             Cursor cursor = (Cursor) listView.getItemAtPosition(position);
             place_id = cursor.getString(0);
+            selectedPlace.setText(cursor.getString(1));
         }
     }
 }

@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="100dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Event Name"
@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Great"
@@ -30,7 +30,7 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Fair"
@@ -47,15 +47,10 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <ScrollView
+    <ListView
+        android:id="@+id/org_feedback_lv"
         android:layout_width="match_parent"
-        android:layout_height="450dp">
-
-        <ListView
-            android:id="@+id/org_feedback_lv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </ScrollView>
+        android:layout_height="450dp" />
 
     <Button
         android:id="@+id/org_feedback_back"

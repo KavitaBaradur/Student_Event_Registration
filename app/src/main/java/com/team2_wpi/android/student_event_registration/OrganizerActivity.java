@@ -74,6 +74,8 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
             // go feedback page
             Intent intent = new Intent(this, OrganizerFeedbackActivity.class);
             intent.putExtra("Org ID", org_id);
+            intent.putExtra("Event ID", selectedEventID);
+            intent.putExtra("Event Name", selectedEvent.getText());
             this.startActivity(intent);
         }
         else if (id == R.id.org_welcome_add) {

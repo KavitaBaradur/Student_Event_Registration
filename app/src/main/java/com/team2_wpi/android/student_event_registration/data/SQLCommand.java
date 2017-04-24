@@ -63,11 +63,12 @@ public abstract class SQLCommand {
                                              "where Event_ID = ?";
 
     // init org feedback history
-    public static String ORG_FEEDBACK = "select E.Event_ID as _id, E.Event_Name as name, SUM(F.Good) as great, SUM(F.Fair) as fair, SUM(F.Need_Imp) as need_imp " +
+    public static String ORG_FEEDBACK = "select E.Event_ID as _id, E.Event_Name as name, F.Feedback as feedback, count(F.Feedback) as f_num " +
                                          "from Event E, Feedback F " +
                                          "where E.Event_ID = F.Event_ID " +
+                                         "and E.Event_ID = ?" +
                                          "and E.Org_ID = ? " +
-                                         "group by E.Event_ID";
+                                         "group by F.Feedback";
     // get available place
     public static String ORG_AVAL_PLACE = "select distinct P.Place_ID as _id, P.Place_Name as name " +
                                           "from Place P, Reserve R " +

@@ -19,6 +19,9 @@
         <activity android:name=".StudentLoginActivity"></activity>
         <activity android:name=".StudentEventActivity"></activity>
         <activity android:name=".StudentDetailsActivity"></activity>
+        <activity android:name=".StudentEventRegisterActivity"></activity>
+        <activity android:name=".StudentEventsAttendedActivity"></activity>
+        <activity android:name=".StudentSubmitFeedbackActivity"></activity>
         <activity android:name=".OrganizerActivity"></activity>
         <activity android:name=".OrganizerAddEventActivity" />
         <activity android:name=".OrganizerFeedbackActivity" />

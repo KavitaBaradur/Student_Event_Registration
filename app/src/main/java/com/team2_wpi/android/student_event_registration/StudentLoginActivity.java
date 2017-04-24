@@ -38,6 +38,8 @@ public class StudentLoginActivity extends AppCompatActivity implements View.OnCl
         /*get password from database for particular student_id*/
         Cursor cursor = DBOperator.getInstance().execQuery(SQLCommand.QUERY_1, new String[]{stud_id.getText().toString()});
         cursor.moveToFirst();
+        Log.i(cursor.getString(0), "PASSWORD");
+        Log.i(stud_id.getText().toString(), "ID");
 
         if (cursor.getCount() <= 0) {
             String data1 = "no such id";
@@ -51,7 +53,7 @@ public class StudentLoginActivity extends AppCompatActivity implements View.OnCl
             // do what ever you want here
             if (db_password.equals(stud_pass.getText().toString())) {
                 Intent intent = new Intent(this, StudentEventActivity.class);
-                intent.putExtra("student_id",stud_id.getText().toString());
+                intent.putExtra("student_id", stud_id.getText().toString());
                 this.startActivity(intent);
             } else {
                 Toast.makeText(getApplicationContext(), "WRONG PASSWORD", Toast.LENGTH_SHORT).show();

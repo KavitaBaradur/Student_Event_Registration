@@ -1,57 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/event_feedback"
-        android:textColor="@color/red"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:gravity="center"
+        android:layout_marginBottom="40dp"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="40dp"/>
+        android:gravity="center"
+        android:text="@string/event_feedback"
+        android:textAllCaps="true"
+        android:textColor="@color/maroon"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <RadioGroup
+        android:id="@+id/std_feedback_values"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="40dp">
+        android:layout_marginTop="30dp">
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/awesome"
-            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:text="@string/great"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
-            android:layout_marginBottom="20dp"/>
+            android:textStyle="bold" />
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/good"
-            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:text="@string/fair"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
-            android:layout_marginBottom="20dp"/>
+            android:textStyle="bold" />
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/improvement"
-            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        </RadioGroup>
+    </RadioGroup>
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/std_submit_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:text="@string/submit"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:background="@color/translucent_red"
-        android:layout_gravity="center"/>
+        android:background="@drawable/red_button"/>
 </LinearLayout>

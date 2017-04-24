@@ -2,14 +2,13 @@
     <string name="app_name">Student_Event_Registration</string>
     <string name="student_logout">Logout</string>
     <string name="student_profile">Profile</string>
-    <string name="reg_events">Registered Events</string>
     <string name="att_events">Attended Events</string>
-    <string name="events_happening">Events Happening..</string>
+    <string name="events_happening">UPCOMING EVENTS</string>
     <string name="organizer">ORGANIZER</string>
     <string name="student">STUDENT</string>
-    <string name="awesome">Awesome</string>
-    <string name="good">Good</string>
-    <string name="event_feedback">How was the Event..?</string>
+    <string name="great">Great</string>
+    <string name="fair">Fair</string>
+    <string name="event_feedback">How was the Event?</string>
     <string name="improvement">Need Improvement</string>
     <string name="submit">SUBMIT</string>
     <string name="sys_name">EVENT REGISTRATION SYSTEM</string>
@@ -18,4 +17,7 @@
     <string name="password_hint">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="userid">USER_ID :</string>
+    <string name="register">REGISTER</string>
+    <string name="back">BACK</string>
+    <string name="provide">PROVIDE FEEDBACK</string>
 </resources>

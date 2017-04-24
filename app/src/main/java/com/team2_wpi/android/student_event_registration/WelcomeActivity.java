@@ -12,32 +12,32 @@ import com.team2_wpi.android.student_event_registration.util.DBOperator;
 
 public class WelcomeActivity extends AppCompatActivity implements OnClickListener {
 
-    Button stud,org;
+    Button stud, org;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        stud = (Button)this.findViewById(R.id.student_btn);
+        stud = (Button) this.findViewById(R.id.student_btn);
         stud.setOnClickListener(this);
-        org = (Button)this.findViewById(R.id.organizer_btn);
+        org = (Button) this.findViewById(R.id.organizer_btn);
         org.setOnClickListener(this);
 
-        try{
+        try {
             DBOperator.copyDB(getBaseContext());
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         int id = v.getId();
         /*student login screen*/
         if (id == R.id.student_btn) {
             Intent intent = new Intent(this, StudentLoginActivity.class);
             this.startActivity(intent);
 
-        }else if (id == R.id.organizer_btn){
+        } else if (id == R.id.organizer_btn) {
             Intent intent = new Intent(this, OrganizerLoginActivity.class);
             this.startActivity(intent);
         }

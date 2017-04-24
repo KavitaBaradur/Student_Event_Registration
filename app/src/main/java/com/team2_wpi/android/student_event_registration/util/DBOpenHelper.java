@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBOpenHelper extends SQLiteOpenHelper {
 
-    public DBOpenHelper(Context context, String name,int version) {
+    public DBOpenHelper(Context context, String name, int version) {
         super(context, name, null, version);
     }
 

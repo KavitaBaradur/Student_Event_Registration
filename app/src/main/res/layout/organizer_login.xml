@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Organization Login"
+        android:textColor="@color/maroon"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="30sp"
         android:gravity="center"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"/>
@@ -27,6 +37,7 @@
             android:text="USERNAME :"
             android:textStyle="bold"
             android:textSize="20dp"
+            android:textColor="@color/blue"
             android:gravity="center"/>
 
         <EditText
@@ -49,6 +60,7 @@
             android:layout_height="match_parent"
             android:text="PASSWORD :"
             android:textStyle="bold"
+            android:textColor="@color/blue"
             android:textSize="20dp"
             android:gravity="center"/>
         <EditText
@@ -63,10 +75,14 @@
     <Button
         android:id="@+id/org_login_submit"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="Sign In"
+        android:layout_marginTop="20dp"
         android:textAllCaps="true"
         android:gravity="center"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:background="@drawable/red_button"/>
+
+    </LinearLayout>
 
 </LinearLayout>

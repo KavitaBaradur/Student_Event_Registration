@@ -9,8 +9,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="@color/maroon"
         android:text="Events History"
-        android:textSize="30dp"
+        android:textSize="30sp"
+        android:layout_marginTop="50dp"
+        android:layout_margin="20dp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -23,6 +26,7 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Event Name"
+            android:textColor="@color/blue"
             android:textAlignment="center"
             android:textStyle="bold" />
 
@@ -31,6 +35,7 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Event Type"
+            android:textColor="@color/blue"
             android:textAlignment="center"
             android:textStyle="bold" />
 
@@ -39,6 +44,7 @@
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:text="Date"
+            android:textColor="@color/blue"
             android:textAlignment="center"
             android:textStyle="bold" />
 
@@ -47,6 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Time"
+            android:textColor="@color/blue"
             android:textAlignment="center"
             android:textStyle="bold" />
     </LinearLayout>
@@ -63,16 +70,18 @@
 
         <Button
             android:id="@+id/org_welcome_feedback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/red_button"
+            android:layout_margin="20dp"
             android:text="Feedback" />
 
         <Button
             android:id="@+id/org_welcome_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/red_button"
+            android:layout_margin="20dp"
             android:text="Add New" />
     </LinearLayout>
 
@@ -99,8 +108,11 @@
 
     <Button
         android:id="@+id/org_welcome_delete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/red_button"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
         android:text="Delete Selected Event" />
 
 </LinearLayout>

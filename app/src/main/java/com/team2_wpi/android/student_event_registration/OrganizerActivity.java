@@ -26,7 +26,7 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
     private ListView listView;
     private TextView selectedEvent;
     private String selectedEventID;
-    private Button deleteEvent;
+    private Button deleteEvent, logout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,11 +41,14 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
         listView = (ListView) findViewById(R.id.org_event_his_lv);
         selectedEvent = (TextView) findViewById(R.id.org_welcome_selected);
         deleteEvent = (Button) findViewById(R.id.org_welcome_delete);
+        logout = (Button) findViewById(R.id.org_logout);
+
         // set up on click
         feedback.setOnClickListener(this);
         add_new.setOnClickListener(this);
         listView.setOnItemClickListener(new ItemClickListener());
         deleteEvent.setOnClickListener(this);
+        logout.setOnClickListener(this);
         // visualize event history
         visualHistory();
     }
@@ -96,6 +99,12 @@ public class OrganizerActivity extends AppCompatActivity implements View.OnClick
             Intent intent = new Intent(this, OrganizerActivity.class);
             intent.putExtra("Org ID", org_id);
             this.startActivity(intent);
+        }
+        else if (id ==R.id.org_logout)
+        {
+            Intent intent3 = new Intent(this, WelcomeActivity.class);
+            intent3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent3);
         }
     }
 

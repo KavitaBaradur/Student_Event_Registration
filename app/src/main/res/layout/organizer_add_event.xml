@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/textView2"
@@ -24,20 +25,21 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:layout_weight="1"
             android:text="Name"
+            android:gravity="center"
             android:textColor="@color/blue"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/org_add_event_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:textSize="24sp" />
+            android:textSize="20sp"
+            android:layout_weight="0.17" />
 
     </LinearLayout>
 
@@ -49,20 +51,21 @@
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:layout_weight="1"
             android:text="Type"
+            android:gravity="center"
             android:textColor="@color/blue"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/org_add_event_type"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="40dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:textSize="24sp" />
+            android:textSize="20sp"
+            android:layout_weight="0.16" />
 
     </LinearLayout>
 
@@ -74,21 +77,22 @@
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="38dp"
+            android:layout_weight="0.27"
             android:text="Date"
+            android:gravity="center"
             android:textColor="@color/blue"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/org_add_event_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:inputType="date"
-            android:text="YYYY-MM-DD"
-            android:textSize="24sp" />
+            android:hint="YYYY-MM-DD"
+            android:textSize="15sp"
+            android:layout_weight="0.15" />
     </LinearLayout>
 
     <LinearLayout
@@ -99,80 +103,85 @@
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_weight="0.29"
             android:text="Time"
+            android:gravity="center"
             android:textColor="@color/blue"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/org_add_event_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:inputType="time"
-            android:text="HH:MM:SS"
-            android:textSize="24sp" />
+            android:hint="HH:MM:SS"
+            android:textSize="15sp"
+            android:layout_weight="0.15" />
     </LinearLayout>
 
     <Button
         android:id="@+id/org_add_event_chkaval"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
         android:background="@drawable/red_button"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:layout_gravity="center"
         android:text="Check Available Place"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/org_add_event_lv"
         android:choiceMode="singleChoice"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="61dp"
+        android:layout_weight="0.36" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="0.26">
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
             android:text="Selected Place: "
+            android:gravity="center"
             android:textColor="@color/blue"
-            android:textSize="24sp" />
+            android:textSize="15sp"
+            android:layout_weight="0.39" />
 
         <TextView
             android:id="@+id/org_add_event_selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:ems="10"
-            android:textSize="24sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/org_add_event_funding"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
         android:background="@drawable/red_button"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:layout_gravity="center"
         android:text="Add Funding"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/org_add_event_submit"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
         android:background="@drawable/red_button"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:layout_gravity="center"
         android:text="Submit"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </LinearLayout>

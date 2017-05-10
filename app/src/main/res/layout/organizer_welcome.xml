@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/textView"
@@ -19,72 +20,82 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:text="Event Name"
             android:textColor="@color/blue"
             android:textAlignment="center"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="0.34" />
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_width="102dp"
+            android:layout_height="28dp"
             android:text="Event Type"
             android:textColor="@color/blue"
             android:textAlignment="center"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="0.25" />
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="200dp"
+            android:layout_width="89dp"
             android:layout_height="match_parent"
             android:text="Date"
             android:textColor="@color/blue"
             android:textAlignment="center"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="0.20" />
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="85dp"
+            android:layout_height="23dp"
             android:text="Time"
             android:textColor="@color/blue"
             android:textAlignment="center"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="0.18" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/org_event_his_lv"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"></ListView>
+        android:layout_width="wrap_content"
+        android:layout_height="202dp"></ListView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <Button
             android:id="@+id/org_welcome_feedback"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
             android:background="@drawable/red_button"
             android:layout_margin="20dp"
             android:text="Feedback"
-            android:textStyle="bold"/>
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_weight="0.39" />
 
         <Button
             android:id="@+id/org_welcome_add"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
             android:background="@drawable/red_button"
             android:layout_margin="20dp"
             android:text="Add New"
-            android:textStyle="bold"/>
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_weight="0.46" />
     </LinearLayout>
 
     <LinearLayout
@@ -95,28 +106,42 @@
         <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_weight="0.21"
             android:text="Selected Event: "
+            android:gravity="center"
             android:textColor="@color/blue"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/org_welcome_selected"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="24sp" />
+            android:layout_height="match_parent"
+            android:layout_weight="1.00"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/org_welcome_delete"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
         android:background="@drawable/red_button"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:layout_gravity="center"
         android:text="Delete Selected Event"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_weight="0.04" />
+
+    <Button
+        android:id="@+id/org_logout"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:background="@drawable/red_button"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:text="Logout"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
 
 </LinearLayout>

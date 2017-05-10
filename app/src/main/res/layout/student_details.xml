@@ -9,125 +9,122 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="30dp"
-        android:layout_margin="60dp"
+        android:layout_margin="30dp"
         android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1">
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_weight="0.5"
-            android:text="Name :"
-            android:textColor="@color/blue"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="136dp"
+                android:layout_height="50dp"
+                android:text="Name :"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/db_name"
-            android:layout_width="100dp"
-            android:layout_height="64dp"
-            android:layout_weight="0.5"
-            android:textSize="30sp"
+            <EditText
+                android:id="@+id/db_name"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="41dp"
+                android:text="Major :"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="0.26" />
+
+            <EditText
+                android:id="@+id/db_major"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:layout_weight="0.67"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="71dp"
+                android:text="New Password :"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="0.13" />
+
+            <EditText
+                android:id="@+id/new_password"
+                android:layout_width="100dp"
+                android:layout_height="64dp"
+                android:layout_weight="0.77"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="143dp"
+                android:layout_height="64dp"
+                android:text="Confirm Password :"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_details"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="SUBMIT"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        android:weightSum="1">
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_weight="0.5"
-            android:text="Major :"
-            android:textColor="@color/blue"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/db_major"
-            android:layout_width="100dp"
-            android:layout_height="64dp"
-            android:layout_weight="0.5"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        android:weightSum="1">
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_weight="0.5"
-            android:text="New Password :"
-            android:textColor="@color/blue"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/new_password"
-            android:layout_width="100dp"
-            android:layout_height="64dp"
-            android:layout_weight="0.5"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/purple"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        android:weightSum="1">
-
-        <TextView
-            android:layout_width="222dp"
-            android:layout_height="90dp"
-            android:text="Confirm Password :"
-            android:textColor="@color/blue"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/confirm_password"
-            android:layout_width="100dp"
-            android:layout_height="64dp"
-            android:layout_weight="0.5"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/purple"/>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/submit_details"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80dp"
-        android:text="SUBMIT"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:background="@drawable/red_button"/>
+            android:background="@drawable/red_button"/>
 
     </LinearLayout>
 
